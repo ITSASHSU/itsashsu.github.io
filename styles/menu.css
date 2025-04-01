@@ -1,44 +1,53 @@
-/* Reset default styles */
-* {
+html, body {
     margin: 0;
-    padding: 0;
+    height: 100%;
+    font-size: 100%;
+}
+
+* {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
+/* Base Styles */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
     line-height: 1.6;
     background: linear-gradient(to bottom, #eceff1, #ffffff);
     color: #37474f;
 }
 
 /* Navigation Styles */
-nav {
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Changed to center for desktop */
     background: linear-gradient(135deg, #263238, #455a64, #607d8b);
+    color: #eceff1;
+    height: 3em;
+    padding: 1em;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    padding: 1rem 0;
 }
 
-nav ul {
-    list-style: none;
+.menu {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
 }
 
-nav li {
+.menu > li {
     margin: 0 1.5rem;
     position: relative;
 }
 
-nav a {
+.menu a {
     color: #eceff1;
     text-decoration: none;
     font-weight: 600;
@@ -50,7 +59,7 @@ nav a {
     border-radius: 25px;
 }
 
-nav a::after {
+.menu a::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -63,20 +72,71 @@ nav a::after {
     transition: transform 0.3s ease-out;
 }
 
-nav a:hover::after {
+.menu a:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
-nav a:hover {
+.menu a:hover {
     background: rgba(255,255,255,0.1);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-nav a.current {
+.menu a.current {
     background: rgba(255,255,255,0.2);
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Hamburger Menu Styles (Hidden by Default) */
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
 }
 
 /* Header Styles */
@@ -103,7 +163,7 @@ header h2 {
 
 /* Main Content */
 main {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto 3rem;
     padding: 0 2rem;
 }
@@ -112,7 +172,7 @@ section {
     background: white;
     border-radius: 15px;
     box-shadow: 0 5px 25px rgba(0,0,0,0.1);
-    padding: 2rem;
+    padding: 2.5rem;
     margin-bottom: 2rem;
 }
 
@@ -180,4 +240,54 @@ footer p {
 
 section {
     animation: fadeIn 0.6s ease-out;
+}
+
+/* Mobile Menu (Below 768px) */
+@media (max-width: 768px) {
+    .top-nav {
+        justify-content: space-between; /* Switches to space-between for hamburger */
+    }
+
+    .menu-button-container {
+        display: flex;
+    }
+
+    .menu {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 3em; /* Height of nav */
+        left: 0;
+        width: 100%;
+        background: linear-gradient(135deg, #263238, #455a64, #607d8b);
+    }
+
+    #menu-toggle:checked ~ .menu {
+        display: flex; /* Shows menu when checkbox is checked */
+    }
+
+    .menu > li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu a {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .menu a::after {
+        display: none; /* Remove underline effect on mobile */
+    }
+
+    .menu a:hover {
+        transform: none; /* Remove lift effect on mobile */
+        box-shadow: none;
+    }
+
+    header {
+        padding-top: 5rem; /* Adjusted for smaller nav height */
+    }
 }
