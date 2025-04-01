@@ -12,7 +12,7 @@ html, body {
 /* Base Styles */
 body {
     line-height: 1.6;
-    background: linear-gradient(to bottom, #eceff1, #ffffff); /* Applied to body only */
+    background: linear-gradient(to bottom, #eceff1, #ffffff);
     color: #37474f;
 }
 
@@ -29,7 +29,8 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
-    justify-content: center; /* Centered for desktop */
+    justify-content: center;
+    overflow: visible; /* Ensures shadow isn’t clipped */
 }
 
 .menu {
@@ -39,6 +40,7 @@ body {
     margin: 0;
     padding: 0;
     max-width: 1200px;
+    z-index: 1001; /* Higher than nav to ensure visibility */
 }
 
 .menu > li {
@@ -97,7 +99,7 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 1em; /* Positioned on the right */
+    right: 1em;
 }
 
 #menu-toggle {
@@ -144,7 +146,7 @@ body {
 header {
     text-align: center;
     padding: 6rem 2rem 2rem;
-    background: transparent; /* Removed gradient to avoid overlap */
+    background: transparent;
 }
 
 header h1 {
@@ -170,7 +172,7 @@ main {
 }
 
 section {
-    background: white; /* Individual section background */
+    background: white;
     border-radius: 15px;
     box-shadow: 0 5px 25px rgba(0,0,0,0.1);
     padding: 2.5rem;
@@ -246,7 +248,8 @@ section {
 /* Mobile Menu (Below 768px) */
 @media (max-width: 768px) {
     .top-nav {
-        justify-content: flex-start; /* Adjusted for hamburger positioning */
+        justify-content: flex-start;
+        position: relative; /* Changed to relative to contain shadow */
     }
 
     .menu-button-container {
@@ -256,11 +259,13 @@ section {
     .menu {
         display: none;
         flex-direction: column;
-        position: absolute;
+        position: fixed; /* Changed to fixed to avoid shadow overlap */
         top: 3em;
         left: 0;
         width: 100%;
         background: linear-gradient(135deg, #263238, #455a64, #607d8b);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Shadow on menu instead */
+        z-index: 999; /* Below nav but above content */
     }
 
     #menu-toggle:checked ~ .menu {
