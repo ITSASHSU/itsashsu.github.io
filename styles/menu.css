@@ -12,7 +12,7 @@ html, body {
 /* Base Styles */
 body {
     line-height: 1.6;
-    background: linear-gradient(to bottom, #eceff1, #ffffff);
+    background: white
     color: #37474f;
 }
 
