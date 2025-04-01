@@ -264,7 +264,6 @@ section {
         left: 0;
         width: 100%;
         background: linear-gradient(135deg, #263238, #455a64, #607d8b);
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Shadow on menu instead */
         z-index: 999; /* Below nav but above content */
     }
 
