@@ -12,16 +12,12 @@ html, body {
 /* Base Styles */
 body {
     line-height: 1.6;
-    background: linear-gradient(to bottom, #eceff1, #ffffff);
+    background: linear-gradient(to bottom, #eceff1, #ffffff); /* Applied to body only */
     color: #37474f;
 }
 
 /* Navigation Styles */
 .top-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; /* Changed to center for desktop */
     background: linear-gradient(135deg, #263238, #455a64, #607d8b);
     color: #eceff1;
     height: 3em;
@@ -31,6 +27,9 @@ body {
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centered for desktop */
 }
 
 .menu {
@@ -97,6 +96,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    right: 1em; /* Positioned on the right */
 }
 
 #menu-toggle {
@@ -143,7 +144,7 @@ body {
 header {
     text-align: center;
     padding: 6rem 2rem 2rem;
-    background: linear-gradient(to bottom, rgba(38,50,56,0.1), transparent);
+    background: transparent; /* Removed gradient to avoid overlap */
 }
 
 header h1 {
@@ -169,7 +170,7 @@ main {
 }
 
 section {
-    background: white;
+    background: white; /* Individual section background */
     border-radius: 15px;
     box-shadow: 0 5px 25px rgba(0,0,0,0.1);
     padding: 2.5rem;
@@ -245,7 +246,7 @@ section {
 /* Mobile Menu (Below 768px) */
 @media (max-width: 768px) {
     .top-nav {
-        justify-content: space-between; /* Switches to space-between for hamburger */
+        justify-content: flex-start; /* Adjusted for hamburger positioning */
     }
 
     .menu-button-container {
@@ -253,17 +254,17 @@ section {
     }
 
     .menu {
-        display: none; /* Hidden by default on mobile */
+        display: none;
         flex-direction: column;
         position: absolute;
-        top: 3em; /* Height of nav */
+        top: 3em;
         left: 0;
         width: 100%;
         background: linear-gradient(135deg, #263238, #455a64, #607d8b);
     }
 
     #menu-toggle:checked ~ .menu {
-        display: flex; /* Shows menu when checkbox is checked */
+        display: flex;
     }
 
     .menu > li {
@@ -279,15 +280,15 @@ section {
     }
 
     .menu a::after {
-        display: none; /* Remove underline effect on mobile */
+        display: none;
     }
 
     .menu a:hover {
-        transform: none; /* Remove lift effect on mobile */
+        transform: none;
         box-shadow: none;
     }
 
     header {
-        padding-top: 5rem; /* Adjusted for smaller nav height */
+        padding-top: 5rem;
     }
 }
