@@ -20,16 +20,15 @@ body {
 .top-nav {
     background: linear-gradient(135deg, #263238, #455a64, #607d8b);
     color: #eceff1;
-    height: 4.5em;      /* Increased from 3em */
+    height: 3em;        /* Reverted to original height */
     padding: 1em;
     position: fixed;
     width: 100%;
-    top: 0;
+    top: 1em;          /* Moved down from 0 to 1em */
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: 100% 200%; /* Ensures gradient fills the space */
 }
 
 .menu {
@@ -39,7 +38,7 @@ body {
     margin: 0;
     padding: 0;
     max-width: 1200px;
-    z-index: 1001; /* Higher than nav to ensure visibility */
+    z-index: 1001;
 }
 
 .menu > li {
@@ -133,7 +132,7 @@ body {
 /* Header Styles */
 header {
     text-align: center;
-    padding: 6rem 2rem 2rem;
+    padding: 6rem 2rem 2rem; /* Adjusted from 6rem to account for nav movement */
     background: transparent;
 }
 
@@ -238,8 +237,8 @@ section {
     .top-nav {
         justify-content: flex-start;
         position: relative;
-        height: auto;    /* Keep flexibility */
-        min-height: 4.5em; /* Match desktop height */
+        top: 1em;         /* Match desktop movement */
+        height: auto;
     }
 
     .menu-button-container {
@@ -250,7 +249,7 @@ section {
         display: none;
         flex-direction: column;
         position: fixed;
-        top: 4.5em;     /* Adjusted to match new nav height */
+        top: 4em;        /* Adjusted: 1em (top) + 3em (height) */
         left: 0;
         width: 100%;
         background: linear-gradient(135deg, #263238, #455a64, #607d8b);
@@ -283,6 +282,6 @@ section {
     }
 
     header {
-        padding-top: 6em; /* Increased to account for taller nav */
+        padding-top: 6rem; /* Keep this to prevent overlap */
     }
 }
