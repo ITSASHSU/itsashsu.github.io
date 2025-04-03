@@ -12,7 +12,7 @@ html, body {
 /* Base Styles */
 body {
     line-height: 1.6;
-    background: whitesmoke
+    background: whitesmoke;
     color: #37474f;
 }
 
@@ -20,16 +20,16 @@ body {
 .top-nav {
     background: linear-gradient(135deg, #263238, #455a64, #607d8b);
     color: #eceff1;
-    height: 3em;
+    height: 4.5em;      /* Increased from 3em */
     padding: 1em;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: 100% 200%; /* Ensures gradient fills the space */
 }
 
 .menu {
@@ -237,7 +237,9 @@ section {
 @media (max-width: 768px) {
     .top-nav {
         justify-content: flex-start;
-        position: relative; /* Changed to relative to contain shadow */
+        position: relative;
+        height: auto;    /* Keep flexibility */
+        min-height: 4.5em; /* Match desktop height */
     }
 
     .menu-button-container {
@@ -247,12 +249,12 @@ section {
     .menu {
         display: none;
         flex-direction: column;
-        position: fixed; /* Changed to fixed to avoid shadow overlap */
-        top: 3em;
+        position: fixed;
+        top: 4.5em;     /* Adjusted to match new nav height */
         left: 0;
         width: 100%;
         background: linear-gradient(135deg, #263238, #455a64, #607d8b);
-        z-index: 999; /* Below nav but above content */
+        z-index: 999;
     }
 
     #menu-toggle:checked ~ .menu {
@@ -281,6 +283,6 @@ section {
     }
 
     header {
-        padding-top: 5rem;
+        padding-top: 6em; /* Increased to account for taller nav */
     }
 }
