@@ -279,7 +279,7 @@ section {
         display: block;
         padding: 1rem;
         border-bottom: 1px solid rgba(255,255,255,0.1);
-        white-space: nowrap; /* Keep this for mobile too */
+        white-space: nowrap;
     }
 
     .menu a::after {
