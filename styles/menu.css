@@ -21,13 +21,13 @@ body {
     background: linear-gradient(135deg, #263238, #455a64, #607d8b);
     color: #eceff1;
     height: 3em;
-    padding: 0 1em; /* Changed to 0 vertical padding for precise control */
+    padding: 0 1em;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     display: flex;
-    align-items: center; /* Ensures vertical centering */
+    align-items: center;
     justify-content: center;
 }
 
@@ -39,14 +39,14 @@ body {
     padding: 0;
     max-width: 1200px;
     z-index: 1001;
-    height: 100%; /* Ensure menu takes full height of nav */
-    align-items: center; /* Center menu items vertically */
+    height: 100%;
+    align-items: center;
 }
 
 .menu > li {
-    margin: 0 1.5rem;
+    margin: 0 1rem; /* Reduced from 1.5rem to give more horizontal space */
     position: relative;
-    display: flex; /* Added to help with vertical centering */
+    display: flex;
     align-items: center;
 }
 
@@ -54,13 +54,14 @@ body {
     color: #eceff1;
     text-decoration: none;
     font-weight: 600;
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 1.2rem; /* Reduced horizontal padding from 1.5rem to 1.2rem */
     transition: all 0.4s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
     border-radius: 25px;
-    display: inline-block; /* Ensure proper sizing */
+    display: inline-block;
+    white-space: nowrap; /* Prevents text wrapping */
 }
 
 /* Rest of the menu link styles remain the same */
@@ -244,7 +245,7 @@ section {
         justify-content: flex-start;
         position: relative;
         height: auto;
-        padding: 1em; /* Reset padding for mobile */
+        padding: 1em;
     }
 
     .menu-button-container {
@@ -260,7 +261,7 @@ section {
         width: 100%;
         background: linear-gradient(135deg, #263238, #455a64, #607d8b);
         z-index: 999;
-        height: auto; /* Reset height for mobile */
+        height: auto;
     }
 
     #menu-toggle:checked ~ .menu {
@@ -271,13 +272,14 @@ section {
         margin: 0;
         width: 100%;
         text-align: center;
-        display: block; /* Reset to block for mobile */
+        display: block;
     }
 
     .menu a {
         display: block;
         padding: 1rem;
         border-bottom: 1px solid rgba(255,255,255,0.1);
+        white-space: nowrap; /* Keep this for mobile too */
     }
 
     .menu a::after {
