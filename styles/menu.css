@@ -24,9 +24,9 @@ body {
     padding: 1em;
     position: fixed;
     width: 100%;
-    top: 0;          /* Original */
-    margin-top: 1em; /* Add this to push it down */
+    top: 0;
     z-index: 1000;
+
     display: flex;
     align-items: center;
     justify-content: center;
