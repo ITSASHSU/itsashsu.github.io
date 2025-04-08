@@ -1,48 +1,378 @@
-<section id="officers">
-    <h2>Officer Team</h2>
-    <div class="officer-grid">
-        <div class="officer-card">
-            <img src="images/01fav.png" alt="Officer 1">
-            <div class="officer-info">
-                <h3>Officer 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </div>
-        <div class="officer-card">
-            <img src="images/01fav.png" alt="Officer 2">
-            <div class="officer-info">
-                <h3>Officer 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </div>
-        <div class="officer-card">
-            <img src="images/01fav.png" alt="Officer 3">
-            <div class="officer-info">
-                <h3>Officer 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </div>
-        <div class="officer-card">
-            <img src="images/01fav.png" alt="Officer 4">
-            <div class="officer-info">
-                <h3>Officer 4</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </div>
-        <div class="officer-card">
-            <img src="images/01fav.png" alt="Officer 5">
-            <div class="officer-info">
-                <h3>Officer 5</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </div>
-        <div class="officer-card">
-            <img src="images/01fav.png" alt="Officer 6">
-            <div class="officer-info">
-                <h3>Officer 6</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </div>
-    </div>
-    <p><a href="#">Link to former officers page</a></p>
-</section>
+html, body {
+    margin: 0;
+    height: 100%;
+    font-size: 100%;
+}
+
+* {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+    line-height: 1.6;
+    background: whitesmoke;
+    color: #37474f;
+}
+
+/* Navigation Styles */
+.top-nav {
+    background: linear-gradient(135deg, #263238, #455a64, #607d8b);
+    color: #eceff1;
+    height: 3em;
+    padding: 0 1em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-width: 1200px;
+    z-index: 1001;
+    height: 100%;
+    align-items: center;
+}
+
+.menu > li {
+    margin: 0 1rem; /* Reduced from 1.5rem to give more horizontal space */
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    color: #eceff1;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.8rem 1.2rem; /* Reduced horizontal padding from 1.5rem to 1.2rem */
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    border-radius: 25px;
+    display: inline-block;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+/* Rest of the menu link styles remain the same */
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #b0bec5;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.menu a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Hamburger Menu Styles (Hidden by Default) */
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 1em;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 6rem 2rem 2rem;
+    background: transparent;
+}
+
+header h1 {
+    color: #263238;
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #263238, #455a64);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header h2 {
+    color: #607d8b;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+}
+
+section {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    color: #455a64;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+section h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: #607d8b;
+    border-radius: 2px;
+}
+
+section p {
+    color: #546e7a;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(to top, #263238, #37474f);
+    color: #eceff1;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+footer a {
+    color: #b0bec5;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: #eceff1;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Mobile Menu (Below 768px) */
+@media (max-width: 768px) {
+    .top-nav {
+        justify-content: flex-start;
+        position: relative;
+        height: auto;
+        padding: 1.5em;
+    }
+
+    .menu-button-container {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 3em;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(135deg, #263238, #455a64, #607d8b);
+        z-index: 999;
+        height: auto;
+    }
+
+    #menu-toggle:checked ~ .menu {
+        display: flex;
+    }
+
+    .menu > li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+
+    .menu a {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        white-space: nowrap;
+    }
+
+    .menu a::after {
+        display: none;
+    }
+
+    .menu a:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    header {
+        padding-top: 5rem;
+    }
+}
+
+/* Officer Grid Styles */
+.officer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, auto); /* 2 rows */
+    gap: 1.5rem; /* Space between cards */
+    margin-bottom: 2rem;
+}
+
+.officer-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.officer-card img {
+    width: 100%;
+    height: 300px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    display: block;
+}
+
+.officer-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(38, 50, 56, 0.8); /* Semi-transparent dark background */
+    color: #eceff1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.officer-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #eceff1;
+}
+
+.officer-info p {
+    font-size: 0.9rem; /* 10pt is approximately 0.9rem */
+    margin: 0;
+    line-height: 1.4;
+}
+
+.officer-card:hover .officer-info {
+    opacity: 1;
+}
+
+.officer-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .officer-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+        grid-template-rows: repeat(3, auto); /* 3 rows to accommodate 6 officers */
+    }
+}
+
+@media (max-width: 480px) {
+    .officer-grid {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+        grid-template-rows: repeat(6, auto); /* 6 rows for each officer */
+    }
+
+    .officer-card img {
+        height: 250px; /* Slightly smaller height for mobile */
+    }
+}
