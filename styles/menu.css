@@ -12,8 +12,8 @@ html, body {
 /* Base Styles */
 body {
     line-height: 1.6;
-    background: #121212; /* Dark base */
-    color: #f5f5f5;       /* Light text */
+    background: #6e6e6ef3; /* Dark base */
+    color: #000000;       /* Light text */
 }
 
 /* Navigation Styles - UNCHANGED */
@@ -201,7 +201,7 @@ section p {
 footer {
     text-align: center;
     padding: 3rem 2rem;
-    background: linear-gradient(to top, #FF6A13, #1a1a1a);
+    background: linear-gradient(to top, #000000, #1a1a1a);
     color: #f5f5f5;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
