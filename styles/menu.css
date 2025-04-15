@@ -12,11 +12,11 @@ html, body {
 /* Base Styles */
 body {
     line-height: 1.6;
-    background: whitesmoke;
-    color: #37474f;
+    background: #121212; /* Dark base */
+    color: #f5f5f5;       /* Light text */
 }
 
-/* Navigation Styles */
+/* Navigation Styles - UNCHANGED */
 .top-nav {
     background: linear-gradient(135deg, #000000, #ff781e, #ff9100, #ffddc6);
     color: #eceff1;
@@ -31,6 +31,7 @@ body {
     justify-content: center;
 }
 
+/* MENU STYLES - UNCHANGED */
 .menu {
     display: flex;
     flex-direction: row;
@@ -44,7 +45,7 @@ body {
 }
 
 .menu > li {
-    margin: 0 1rem; /* Reduced from 1.5rem to give more horizontal space */
+    margin: 0 1rem;
     position: relative;
     display: flex;
     align-items: center;
@@ -54,17 +55,16 @@ body {
     color: #eceff1;
     text-decoration: none;
     font-weight: 600;
-    padding: 0.8rem 1.2rem; /* Reduced horizontal padding from 1.5rem to 1.2rem */
+    padding: 0.8rem 1.2rem;
     transition: all 0.4s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
     border-radius: 25px;
     display: inline-block;
-    white-space: nowrap; /* Prevents text wrapping */
+    white-space: nowrap;
 }
 
-/* Rest of the menu link styles remain the same */
 .menu a::after {
     content: '';
     position: absolute;
@@ -83,7 +83,7 @@ body {
     transform-origin: bottom left;
 }
 
-/* Hamburger Menu Styles (Hidden by Default) */
+/* Hamburger Menu Styles */
 .menu-button-container {
     display: none;
     height: 100%;
@@ -144,16 +144,15 @@ header {
 }
 
 header h1 {
-    color: #263238;
     font-size: 2.8rem;
     margin-bottom: 0.5rem;
-    background: linear-gradient(to right, #263238, #455a64);
+    background: linear-gradient(to right, #FF6A13, #FFA947);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 header h2 {
-    color: #607d8b;
+    color: #f5f5f5;
     font-size: 1.5rem;
     font-weight: 400;
 }
@@ -166,15 +165,15 @@ main {
 }
 
 section {
-    background: white;
+    background: #1e1e1e;
     border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 25px rgba(255,106,19,0.15);
     padding: 2.5rem;
     margin-bottom: 2rem;
 }
 
 section h2 {
-    color: #455a64;
+    color: #FF6A13;
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     position: relative;
@@ -188,12 +187,12 @@ section h2::before {
     top: 0;
     height: 100%;
     width: 4px;
-    background: #607d8b;
+    background: #FF6A13;
     border-radius: 2px;
 }
 
 section p {
-    color: #546e7a;
+    color: #e0e0e0;
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
 }
@@ -202,21 +201,21 @@ section p {
 footer {
     text-align: center;
     padding: 3rem 2rem;
-    background: linear-gradient(to top, #263238, #37474f);
-    color: #eceff1;
+    background: linear-gradient(to top, #000000, #1a1a1a);
+    color: #f5f5f5;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 
 footer a {
-    color: #b0bec5;
+    color: #FF6A13;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 footer a:hover {
-    color: #eceff1;
-    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255,106,19,0.5);
 }
 
 footer p {
@@ -239,7 +238,7 @@ section {
     animation: fadeIn 0.6s ease-out;
 }
 
-/* Mobile Menu (Below 768px) */
+/* Mobile Menu */
 @media (max-width: 768px) {
     .top-nav {
         justify-content: flex-start;
@@ -259,7 +258,7 @@ section {
         top: 3em;
         left: 0;
         width: 100%;
-        background: linear-gradient(135deg, #263238, #455a64, #607d8b);
+        background: linear-gradient(135deg, #000000, #FF6A13);
         z-index: 999;
         height: auto;
     }
@@ -299,9 +298,9 @@ section {
 /* Officer Grid Styles */
 .officer-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    grid-template-rows: repeat(2, auto); /* 2 rows */
-    gap: 1.5rem; /* Space between cards */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1.5rem;
     margin-bottom: 2rem;
 }
 
@@ -309,14 +308,14 @@ section {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
 .officer-card img {
     width: 100%;
-    height: 300px; /* Fixed height for consistency */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    height: 300px;
+    object-fit: cover;
     display: block;
 }
 
@@ -326,8 +325,8 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(38, 50, 56, 0.8); /* Semi-transparent dark background */
-    color: #eceff1;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -341,11 +340,11 @@ section {
 .officer-info h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    color: #eceff1;
+    color: #FF6A13;
 }
 
 .officer-info p {
-    font-size: 0.9rem; /* 10pt is approximately 0.9rem */
+    font-size: 0.9rem;
     margin: 0;
     line-height: 1.4;
 }
@@ -355,24 +354,24 @@ section {
 }
 
 .officer-card:hover {
-    transform: translateY(-5px); /* Slight lift effect on hover */
+    transform: translateY(-5px);
 }
 
-/* Responsive Design for Smaller Screens */
+/* Responsive Design */
 @media (max-width: 768px) {
     .officer-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
-        grid-template-rows: repeat(3, auto); /* 3 rows to accommodate 6 officers */
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
     }
 }
 
 @media (max-width: 480px) {
     .officer-grid {
-        grid-template-columns: 1fr; /* 1 column on very small screens */
-        grid-template-rows: repeat(6, auto); /* 6 rows for each officer */
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
     }
 
     .officer-card img {
-        height: 250px; /* Slightly smaller height for mobile */
+        height: 250px;
     }
 }
