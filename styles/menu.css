@@ -13,7 +13,10 @@ html, body {
 body {
     line-height: 1.6;
     background: linear-gradient(135deg, #000000, #ff781e, #ff9100, #ffddc6);
-    color: #000000;       /* Light text */
+    background-repeat: no-repeat; /* Prevent gradient from repeating */
+    background-size: cover; /* Ensure gradient covers the entire area */
+    min-height: 100vh; /* Ensure body spans at least the full viewport height */
+    color: #000000; /* Light text */
 }
 
 /* Navigation Styles - UNCHANGED */
