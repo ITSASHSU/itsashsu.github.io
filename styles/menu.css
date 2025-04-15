@@ -69,7 +69,7 @@ body {
     left: 0;
     width: 100%;
     height: 3px;
-    background: #b0bec5;
+    background: #FF6A13; /* Changed from #b0bec5 to match theme */
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease-out;
