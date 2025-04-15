@@ -1,20 +1,14 @@
 html, body {
     margin: 0;
-    height: 100%;
-    font-size: 100%;
+    min-height: 100vh; /* Ensure at least viewport height */
+    height: auto; /* Allow height to expand with content */
 }
 
-* {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-}
-
-/* Base Styles */
 body {
     line-height: 1.6;
     background: linear-gradient(135deg, #000000, #ff781e, #ff9100, #ffddc6);
     background-repeat: no-repeat; /* Prevent gradient from repeating */
-    background-size: cover; /* Ensure gradient covers the entire area */
+    background-size: 100% 100%; /* Stretch gradient to full width and height */
     min-height: 100vh; /* Ensure body spans at least the full viewport height */
     color: #000000; /* Light text */
 }
