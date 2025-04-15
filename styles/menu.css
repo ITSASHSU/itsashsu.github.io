@@ -12,14 +12,14 @@ html, body {
 /* Base Styles */
 body {
     line-height: 1.6;
-    background: #DDCDAE; /* SHSU Sand for a warm, neutral background */
-    color: #004853; /* SHSU Jade for body text */
+    background: whitesmoke;
+    color: #37474f;
 }
 
 /* Navigation Styles */
 .top-nav {
-    background: linear-gradient(135deg, #F56423, #465D7B); /* SHSU Orange to SHSU Denim */
-    color: #FFFFFF; /* SHSU White */
+    background: linear-gradient(135deg, #000000, #ff781e, #ff9100);
+    color: #eceff1;
     height: 3em;
     padding: 0 1em;
     position: fixed;
@@ -44,26 +44,27 @@ body {
 }
 
 .menu > li {
-    margin: 0 1rem;
+    margin: 0 1rem; /* Reduced from 1.5rem to give more horizontal space */
     position: relative;
     display: flex;
     align-items: center;
 }
 
 .menu a {
-    color: #FFFFFF; /* SHSU White */
+    color: #eceff1;
     text-decoration: none;
     font-weight: 600;
-    padding: 0.8rem 1.2rem;
+    padding: 0.8rem 1.2rem; /* Reduced horizontal padding from 1.5rem to 1.2rem */
     transition: all 0.4s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
     border-radius: 25px;
     display: inline-block;
-    white-space: nowrap;
+    white-space: nowrap; /* Prevents text wrapping */
 }
 
+/* Rest of the menu link styles remain the same */
 .menu a::after {
     content: '';
     position: absolute;
@@ -71,7 +72,7 @@ body {
     left: 0;
     width: 100%;
     height: 3px;
-    background: #A3D237; /* SHSU Lime for hover underline */
+    background: #b0bec5;
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease-out;
@@ -82,11 +83,7 @@ body {
     transform-origin: bottom left;
 }
 
-.menu a:hover {
-    background: #004853; /* SHSU Jade on hover */
-}
-
-/* Hamburger Menu Styles */
+/* Hamburger Menu Styles (Hidden by Default) */
 .menu-button-container {
     display: none;
     height: 100%;
@@ -107,7 +104,7 @@ body {
 .menu-button::before,
 .menu-button::after {
     display: block;
-    background-color: #FFFFFF; /* SHSU White */
+    background-color: #fff;
     position: absolute;
     height: 4px;
     width: 30px;
@@ -143,17 +140,20 @@ body {
 header {
     text-align: center;
     padding: 6rem 2rem 2rem;
-    background: #BBDDF6; /* SHSU Sky for a light, open feel */
+    background: transparent;
 }
 
 header h1 {
-    color: #F56423; /* SHSU Orange */
+    color: #263238;
     font-size: 2.8rem;
     margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #263238, #455a64);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 header h2 {
-    color: #465D7B; /* SHSU Denim */
+    color: #607d8b;
     font-size: 1.5rem;
     font-weight: 400;
 }
@@ -166,15 +166,15 @@ main {
 }
 
 section {
-    background: #FFFFFF; /* SHSU White for clean sections */
+    background: white;
     border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
     padding: 2.5rem;
     margin-bottom: 2rem;
 }
 
 section h2 {
-    color: #004853; /* SHSU Jade */
+    color: #455a64;
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     position: relative;
@@ -188,12 +188,12 @@ section h2::before {
     top: 0;
     height: 100%;
     width: 4px;
-    background: #F56423; /* SHSU Orange */
+    background: #607d8b;
     border-radius: 2px;
 }
 
 section p {
-    color: #465D7B; /* SHSU Denim */
+    color: #546e7a;
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
 }
@@ -202,21 +202,21 @@ section p {
 footer {
     text-align: center;
     padding: 3rem 2rem;
-    background: #465D7B; /* SHSU Denim */
-    color: #FFFFFF; /* SHSU White */
+    background: linear-gradient(to top, #263238, #37474f);
+    color: #eceff1;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 
 footer a {
-    color: #A3D237; /* SHSU Lime */
+    color: #b0bec5;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 footer a:hover {
-    color: #F56423; /* SHSU Orange */
-    text-shadow: 0 0 10px rgba(245, 100, 35, 0.3);
+    color: #eceff1;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
 }
 
 footer p {
@@ -239,7 +239,7 @@ section {
     animation: fadeIn 0.6s ease-out;
 }
 
-/* Mobile Menu */
+/* Mobile Menu (Below 768px) */
 @media (max-width: 768px) {
     .top-nav {
         justify-content: flex-start;
@@ -259,7 +259,7 @@ section {
         top: 3em;
         left: 0;
         width: 100%;
-        background: linear-gradient(135deg, #F56423, #004853); /* SHSU Orange to Jade */
+        background: linear-gradient(135deg, #263238, #455a64, #607d8b);
         z-index: 999;
         height: auto;
     }
@@ -278,7 +278,7 @@ section {
     .menu a {
         display: block;
         padding: 1rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255,255,255,0.1);
         white-space: nowrap;
     }
 
@@ -287,7 +287,8 @@ section {
     }
 
     .menu a:hover {
-        background: #465D7B; /* SHSU Denim */
+        transform: none;
+        box-shadow: none;
     }
 
     header {
@@ -298,9 +299,9 @@ section {
 /* Officer Grid Styles */
 .officer-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, auto); /* 2 rows */
+    gap: 1.5rem; /* Space between cards */
     margin-bottom: 2rem;
 }
 
@@ -314,8 +315,8 @@ section {
 
 .officer-card img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: 300px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
     display: block;
 }
 
@@ -325,8 +326,8 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 72, 83, 0.8); /* SHSU Jade semi-transparent */
-    color: #FFFFFF; /* SHSU White */
+    background: rgba(38, 50, 56, 0.8); /* Semi-transparent dark background */
+    color: #eceff1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -340,14 +341,13 @@ section {
 .officer-info h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    color: #FFFFFF; /* SHSU White */
+    color: #eceff1;
 }
 
 .officer-info p {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* 10pt is approximately 0.9rem */
     margin: 0;
     line-height: 1.4;
-    color: #BBDDF6; /* SHSU Sky for contrast */
 }
 
 .officer-card:hover .officer-info {
@@ -355,25 +355,24 @@ section {
 }
 
 .officer-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(245, 100, 35, 0.3); /* SHSU Orange shadow */
+    transform: translateY(-5px); /* Slight lift effect on hover */
 }
 
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .officer-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+        grid-template-rows: repeat(3, auto); /* 3 rows to accommodate 6 officers */
     }
 }
 
 @media (max-width: 480px) {
     .officer-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, auto);
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+        grid-template-rows: repeat(6, auto); /* 6 rows for each officer */
     }
 
     .officer-card img {
-        height: 250px;
+        height: 250px; /* Slightly smaller height for mobile */
     }
 }
