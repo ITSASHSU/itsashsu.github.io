@@ -165,7 +165,7 @@ main {
 }
 
 section {
-    background: #1e1e1e;
+    background: linear-gradient(to top, #FF6A13, #1a1a1a);
     border-radius: 15px;
     box-shadow: 0 5px 25px #FF6A13;
     padding: 2.5rem;
