@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="styles/menu.css">
     <link rel="icon" type="image/x-icon" href="images/itsafav.png">
 </head>
-<body id="top" class="light-theme">
+<body id="top">
+    <!-- Theme Toggle Switch (Moved to Top Level) -->
+    <input type="checkbox" id="theme-switch">
     <nav class="top-nav">
         <input type="checkbox" id="menu-toggle">
         <label class="menu-button-container" for="menu-toggle">
@@ -21,9 +23,8 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#officers">Officers</a></li>
         </ul>
-        <!-- Theme Toggle Switch -->
+        <!-- Theme Toggle Label (Stays in Nav for Visual Placement) -->
         <div class="theme-toggle">
-            <input type="checkbox" id="theme-switch">
             <label for="theme-switch" class="theme-switch-label">
                 <span class="slider"></span>
             </label>
