@@ -243,7 +243,7 @@ body {
 }
 
 #theme-switch:checked ~ nav .theme-toggle .theme-switch-label {
-    background: #c4c4c4;
+    background: #2a3439;
 }
 
 #theme-switch:checked ~ nav .theme-toggle .theme-switch-label .slider {
