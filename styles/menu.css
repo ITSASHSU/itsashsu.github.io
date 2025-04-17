@@ -392,7 +392,7 @@ section {
         display: flex;
     }
 
-    #menu-toggle:checked ~ .top-nav .theme-toggle {
+    #menu-toggle:checked + .menu-button-container ~ .theme-toggle {
         display: none; /* Hide theme toggle when menu is open */
     }
 
@@ -430,6 +430,27 @@ section {
 
     header {
         padding-top: 6rem;
+    }
+}
+
+/* Mid-Range Devices (769px to 1300px) */
+@media (min-width: 769px) and (max-width: 1300px) {
+    .theme-toggle {
+        right: 2em; /* Move theme toggle further right to avoid Officers */
+    }
+
+    .theme-text {
+        font-size: 0.7rem; /* Smaller text to reduce width */
+        margin-right: 0.3rem;
+    }
+
+    .menu > li {
+        margin: 0 0.5rem; /* Reduce menu item spacing */
+    }
+
+    .menu a {
+        padding: 0.6rem 0.8rem; /* Smaller padding for menu links */
+        font-size: 0.9rem; /* Slightly smaller font */
     }
 }
 
@@ -500,9 +521,9 @@ section {
 
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
-    #menu-toggle:checked ~ .top-nav .theme-toggle {
-        right: 6em; /* Move further left */
-        top: 0.5em; /* Adjust vertically if needed */
+    .officer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
     }
 }
 
