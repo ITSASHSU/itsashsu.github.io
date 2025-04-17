@@ -22,8 +22,8 @@
     --mobile-menu-bg: linear-gradient(135deg, #263238, #455a64, #607d8b);
 }
 
-/* Dark Mode Overrides */
-#theme-switch:checked ~ body {
+body.dark-theme {
+    /* Dark Mode */
     --body-bg: #1c2526;
     --body-color: #e0e0e0;
     --nav-bg: linear-gradient(135deg, #1c2526, #474747, #c4c4c4);
@@ -225,6 +225,24 @@ body {
 
 #theme-switch:checked + .theme-switch-label .slider {
     transform: translateX(20px);
+}
+
+/* Toggle Theme Class */
+#theme-switch:checked ~ body {
+    content: ''; /* Required for CSS to recognize the selector */
+}
+
+#theme-switch:checked ~ body.light-theme {
+    content: '';
+    display: none; /* Hidden element to trigger theme switch */
+}
+
+body.light-theme {
+    transition: all 0.3s ease;
+}
+
+#theme-switch:checked ~ .light-theme {
+    composes: dark-theme;
 }
 
 /* Header Styles */
