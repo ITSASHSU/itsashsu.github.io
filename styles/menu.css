@@ -359,8 +359,8 @@ section {
     animation: fadeIn 0.6s ease-out;
 }
 
-/* Mobile Menu (Below 768px) */
-@media (max-width: 955px) {
+/* Mobile Menu (Below 975 for overlapping issues px) */
+@media (max-width: 975px) {
     .top-nav {
         justify-content: flex-start;
         position: fixed;
