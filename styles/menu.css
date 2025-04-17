@@ -30,7 +30,7 @@
 
 #theme-switch:checked ~ body {
     --body-bg: #2a3439; /* Matches --section-bg in dark mode */
-    --body-color: #2a3439;
+    --body-color: #e0e0e0;
 }
 
 #theme-switch:checked ~ header {
@@ -204,10 +204,20 @@ body {
     top: 50%;
     transform: translateY(-50%);
     z-index: 1002;
+    display: flex;
+    align-items: center;
 }
 
 #theme-switch {
     display: none;
+}
+
+.theme-text {
+    color: var(--nav-link-color);
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .theme-switch-label {
@@ -407,6 +417,11 @@ section {
 
     .theme-toggle {
         right: 4em; /* Avoid overlap with hamburger menu */
+    }
+
+    .theme-text {
+        font-size: 0.7rem; /* Smaller for mobile */
+        margin-right: 0.3rem;
     }
 
     header {
