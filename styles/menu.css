@@ -374,7 +374,9 @@ section {
         z-index: 999;
         transition: background 0.3s ease;
         overflow-y: auto;
-        padding-bottom: 1rem; /* Add space at bottom */
+        padding-top: 1rem; /* Close gap at top */
+        padding-bottom: 1rem; /* Space at bottom */
+        margin: 0; /* Remove default <ul> margins */
     }
 
     #menu-toggle:checked ~ .menu {
