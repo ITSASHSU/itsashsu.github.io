@@ -30,32 +30,32 @@
 
 #theme-switch:checked ~ body {
     --body-bg: #2a3439; /* Matches --section-bg in dark mode */
-    --body-color: #e0e0e0;
+    --body-color: #2a3439;
 }
 
 #theme-switch:checked ~ header {
     --header-h1-gradient: linear-gradient(to right, #e0e0e0, #b0bec5);
-    --header-h2-color: #b0bec5;
+    --header-h2-color: #2a3439;
 }
 
 #theme-switch:checked ~ main section {
     --section-bg: #2a3439;
     --section-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
-    --section-h2-color: #e0e0e0;
+    --section-h2-color: #2a3439;
     --section-h2-bar: #c4c4c4;
     --section-p-color: #b0bec5;
 }
 
 #theme-switch:checked ~ footer {
     --footer-bg: linear-gradient(to top, #1c2526, #2a3439);
-    --footer-color: #e0e0e0;
+    --footer-color: ##2a3439;
     --footer-link-color: #c4c4c4;
     --footer-link-hover: #e0e0e0;
 }
 
 #theme-switch:checked ~ main section .officer-grid .officer-info {
     --officer-info-bg: rgba(28, 37, 38, 0.8);
-    --officer-info-color: #e0e0e0;
+    --officer-info-color: #2a3439;
 }
 
 html, body {
