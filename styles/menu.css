@@ -392,6 +392,10 @@ section {
         display: flex;
     }
 
+    #menu-toggle:checked ~ .top-nav .theme-toggle {
+        display: none; /* Hide theme toggle when menu is open */
+    }
+
     .menu > li {
         margin: 0;
         width: 100%;
