@@ -436,7 +436,7 @@ section {
 /* Mid-Range Devices (769px to 1300px) */
 @media (min-width: 769px) and (max-width: 1300px) {
     .theme-toggle {
-        right: 2.5em; /* Move theme toggle further right to avoid Officers */
+        right: 1em; /* Move theme toggle further right to avoid Officers */
     }
 
     .theme-text {
@@ -522,7 +522,7 @@ section {
 /* Responsive Design for Smaller Screens */
 @media (min-width: 769px) and (max-width: 1300px) {
     .theme-toggle {
-        right: 2.5em;
+        right: 1em;
     }
     .theme-text {
         font-size: 0.6rem;
