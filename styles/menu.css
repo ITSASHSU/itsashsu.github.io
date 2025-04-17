@@ -22,8 +22,8 @@
     --mobile-menu-bg: linear-gradient(135deg, #263238, #455a64, #607d8b);
 }
 
-[data-theme="dark"] {
-    /* Dark Mode */
+/* Dark Mode Overrides */
+#theme-switch:checked ~ body {
     --body-bg: #1c2526;
     --body-color: #e0e0e0;
     --nav-bg: linear-gradient(135deg, #1c2526, #474747, #c4c4c4);
@@ -61,6 +61,7 @@ body {
     line-height: 1.6;
     background: var(--body-bg);
     color: var(--body-color);
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* Navigation Styles */
@@ -76,6 +77,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background 0.3s ease;
 }
 
 .menu {
@@ -225,15 +227,6 @@ body {
     transform: translateX(20px);
 }
 
-/* Apply Dark Theme */
-html:has(#theme-switch:checked) {
-    --data-theme: dark;
-}
-
-html {
-    transition: all 0.3s ease;
-}
-
 /* Header Styles */
 header {
     text-align: center;
@@ -254,6 +247,7 @@ header h2 {
     color: var(--header-h2-color);
     font-size: 1.5rem;
     font-weight: 400;
+    transition: color 0.3s ease;
 }
 
 /* Main Content */
@@ -269,6 +263,7 @@ section {
     box-shadow: var(--section-shadow);
     padding: 2.5rem;
     margin-bottom: 2rem;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 section h2 {
@@ -277,6 +272,7 @@ section h2 {
     margin-bottom: 1.5rem;
     position: relative;
     padding-left: 1rem;
+    transition: color 0.3s ease;
 }
 
 section h2::before {
@@ -288,12 +284,14 @@ section h2::before {
     width: 4px;
     background: var(--section-h2-bar);
     border-radius: 2px;
+    transition: background 0.3s ease;
 }
 
 section p {
     color: var(--section-p-color);
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
+    transition: color 0.3s ease;
 }
 
 /* Footer */
@@ -304,6 +302,7 @@ footer {
     color: var(--footer-color);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 footer a {
@@ -360,6 +359,7 @@ section {
         background: var(--mobile-menu-bg);
         z-index: 999;
         height: auto;
+        transition: background 0.3s ease;
     }
 
     #menu-toggle:checked ~ .menu {
@@ -437,13 +437,14 @@ section {
     text-align: center;
     padding: 1rem;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, background 0.3s ease;
 }
 
 .officer-info h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     color: var(--officer-info-color);
+    transition: color 0.3s ease;
 }
 
 .officer-info p {
@@ -451,6 +452,7 @@ section {
     margin: 0;
     line-height: 1.4;
     color: var(--officer-info-color);
+    transition: color 0.3s ease;
 }
 
 .officer-card:hover .officer-info {
