@@ -1,7 +1,7 @@
 /* Define Custom Properties for Themes */
 :root {
     /* Light Mode (Default) */
-    --body-bg: whitesmoke;
+    --body-bg: white; /* Matches --section-bg */
     --body-color: #37474f;
     --nav-bg: linear-gradient(135deg, #000000, #474747, #c4c4c4);
     --nav-link-color: #eceff1;
@@ -30,8 +30,8 @@
 }
 
 #theme-switch:checked ~ body {
-    --body-bg: #263238; /* Darker background for dark mode */
-    --body-color: #263238;
+    --body-bg: #2a3439; /* Matches --section-bg in dark mode */
+    --body-color: #e0e0e0;
 }
 
 #theme-switch:checked ~ header {
