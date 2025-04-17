@@ -499,24 +499,6 @@ section {
     transform: translateY(-5px);
 }
 
-/* Responsive Design for Smaller Screens */
-@media (min-width: 769px) and (max-width: 1300px) {
-    .theme-toggle {
-        right: 1.5em;
-    }
-    .theme-text {
-        font-size: 0.6rem;
-        margin-right: 0.2rem;
-    }
-    .menu > li {
-        margin: 0 0.3rem; /* Tighter spacing */
-    }
-    .menu a {
-        padding: 0.5rem 0.6rem;
-        font-size: 0.85rem;
-    }
-}
-
 @media (max-width: 480px) {
     .officer-grid {
         grid-template-columns: 1fr;
