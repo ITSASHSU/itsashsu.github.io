@@ -500,9 +500,9 @@ section {
 
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
-    .officer-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, auto);
+    #menu-toggle:checked ~ .top-nav .theme-toggle {
+        right: 6em; /* Move further left */
+        top: 0.5em; /* Adjust vertically if needed */
     }
 }
 
