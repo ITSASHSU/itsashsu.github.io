@@ -30,7 +30,7 @@
 
 #theme-switch:checked ~ body {
     --body-bg: #2a3439; /* Matches --section-bg in dark mode */
-    --body-color: #e0e0e0;
+    --body-color: #727272;
 }
 
 #theme-switch:checked ~ header {
