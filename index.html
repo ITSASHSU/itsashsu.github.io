@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="styles/menu.css">
     <link rel="icon" type="image/x-icon" href="images/itsafav.png">
 </head>
-<body id="top">
-    <!-- Theme Toggle Switch (Moved to Top Level) -->
+<body id="top" class="light-mode">
     <input type="checkbox" id="theme-switch">
     <nav class="top-nav">
         <input type="checkbox" id="menu-toggle">
@@ -23,7 +22,6 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#officers">Officers</a></li>
         </ul>
-        <!-- Theme Toggle with Explanatory Text -->
         <div class="theme-toggle">
             <label for="theme-switch" class="theme-text">Night Mode</label>
             <label for="theme-switch" class="theme-switch-label">
@@ -31,44 +29,37 @@
             </label>
         </div>
     </nav>
-
     <header>
         <h1>Information Technology Student Association</h1>
         <h2>Sam Houston State University</h2>
     </header>
-
     <main>
         <section id="intro">
             <p>The Information Technology Student Association (ITSA) at Sam Houston State University welcomes those who are interested in the IT field in hopes to further their knowledge beyond the scope of the classroom. ITSA @ SHSU is dedicated to helping students open doors to their future careers with first-hand internship and job opportunities, networking by creating a closer sense of community on campus, and providing resources for self-development.</p>
             <p>We strive to help our members be equipped with the best foundational structure in order to succeed and give them the tools they need to go into the workplace.</p>
         </section>
-
         <section id="what-we-do">
             <h2>What We Do</h2>
             <p>At ITSA, we bridge the gap between classroom learning and real-world IT experience. Our members engage in hands-on projects, workshops, and networking events designed to enhance their technical skills and professional development. We collaborate with industry professionals for guest speakers, and attend conferences and competitions in which our members solve real-world problems using cutting-edge technology and their own wit.</p>
             <p>Beyond technical training, we foster a tight-knit community where students can connect with peers who share their passion for IT. ITSA provides opportunities to explore diverse areas of information technology while building a portfolio of work that stands out to future employers. Join us to gain practical experience, expand your network, and prepare for a successful career in the ever-evolving tech industry.</p>
         </section>
-
         <section id="how-to-join">
             <h2>How to Join</h2>
             <p>ITSA at SHSU is open to all Sam Houston State University students regardless of coding experience or major at any point during the semester. There are no dues and no application forms.</p>
             <p>Simply start attending our weekly meetings! Follow the links below to see our upcoming and past meetings.</p>
             <p>Links:</p>
         </section>
-
         <section id="schedule">
             <h2>Schedule of Events</h2>
             <p>Upcoming Events/Meetings</p>
             <p>Flyers</p>
             <p>Former Events/Meetings</p>
         </section>
-
         <section id="projects">
             <h2>Projects</h2>
             <p>Link to USITCC achievements</p>
             <p>Current Projects</p>
         </section>
-
         <section id="officers">
             <h2>Officer Team</h2>
             <div class="officer-grid">
@@ -118,10 +109,15 @@
             <p><a href="#">Link to former officers page</a></p>
         </section>
     </main>
-
     <footer>
         <p><a href="#top">Return to Top</a></p>
         <p>© 2025 ITSA @ SHSU. All rights reserved.</p>
     </footer>
+    <script>
+        document.getElementById('theme-switch').addEventListener('change', function() {
+            document.body.classList.toggle('dark-mode', this.checked);
+            document.body.classList.toggle('light-mode', !this.checked);
+        });
+    </script>
 </body>
 </html>
