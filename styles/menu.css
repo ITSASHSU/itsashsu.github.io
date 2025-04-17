@@ -30,8 +30,8 @@
 }
 
 #theme-switch:checked ~ body {
-    --body-bg: #121212; /* Darker background for dark mode */
-    --body-color: #e0e0e0;
+    --body-bg: #263238; /* Darker background for dark mode */
+    --body-color: #263238;
 }
 
 #theme-switch:checked ~ header {
