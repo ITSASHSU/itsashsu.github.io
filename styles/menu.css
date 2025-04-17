@@ -436,7 +436,7 @@ section {
 /* Mid-Range Devices (769px to 1300px) */
 @media (min-width: 769px) and (max-width: 1300px) {
     .theme-toggle {
-        right: 3em; /* Move theme toggle further right to avoid Officers */
+        right: 4em; /* Move theme toggle further right to avoid Officers */
     }
 
     .theme-text {
