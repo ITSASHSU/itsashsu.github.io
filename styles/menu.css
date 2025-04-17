@@ -34,8 +34,8 @@
 }
 
 #theme-switch:checked ~ header {
-    --header-h1-gradient: linear-gradient(to right, #e0e0e0, #b0bec5);
-    --header-h2-color: #b0bec5;
+    --header-h1-gradient: #2a3439;
+    --header-h2-color: #2a3439;
 }
 
 #theme-switch:checked ~ main section {
