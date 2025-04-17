@@ -353,7 +353,7 @@ section {
 @media (max-width: 768px) {
     .top-nav {
         justify-content: flex-start;
-        position: fixed; /* Already fixed, ensures it stays at top */
+        position: fixed;
         height: auto;
         padding: 1em;
     }
@@ -366,14 +366,15 @@ section {
         display: none;
         flex-direction: column;
         position: fixed;
-        top: 3em; /* Below .top-nav */
+        top: 3em;
         left: 0;
         width: 100%;
-        height: calc(100vh - 3em); /* Full viewport height minus nav height */
+        height: auto; /* Fit content height */
         background: var(--nav-bg); /* Matches .top-nav background */
         z-index: 999;
         transition: background 0.3s ease;
-        overflow-y: auto; /* Allow scrolling if menu content is long */
+        overflow-y: auto;
+        padding-bottom: 1rem; /* Add space at bottom */
     }
 
     #menu-toggle:checked ~ .menu {
