@@ -433,31 +433,11 @@ section {
     }
 }
 
-/* Mid-Range Devices (769px to 1300px) */
-@media (min-width: 769px) and (max-width: 1300px) {
-    .theme-toggle {
-        right: 2em; /* Move theme toggle further right to avoid Officers */
-    }
-
-    .theme-text {
-        font-size: 0.7rem; /* Smaller text to reduce width */
-        margin-right: 0.3rem;
-    }
-
-    .menu > li {
-        margin: 0 0.5rem; /* Reduce menu item spacing */
-    }
-
-    .menu a {
-        padding: 0.6rem 0.8rem; /* Smaller padding for menu links */
-        font-size: 0.9rem; /* Slightly smaller font */
-    }
-}
 
 /* Officer Grid Styles */
 .officer-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 1.5rem;
     margin-bottom: 2rem;
