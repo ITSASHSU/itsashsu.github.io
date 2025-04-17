@@ -133,7 +133,14 @@ body {
 
 .menu a::after {
     content: '';
-    domain: bottom right;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--nav-link-hover-bg);
+    transform: scaleX(0);
+    transform-origin: bottom right;
     transition: transform 0.3s ease-out;
 }
 
@@ -230,11 +237,11 @@ body {
     transition: transform 0.3s ease;
 }
 
-#theme-switch:checked + .theme-switch-label {
+#theme-switch:checked ~ nav .theme-toggle .theme-switch-label {
     background: #c4c4c4;
 }
 
-#theme-switch:checked + .theme-switch-label .slider {
+#theme-switch:checked ~ nav .theme-toggle .theme-switch-label .slider {
     transform: translateX(20px);
 }
 
