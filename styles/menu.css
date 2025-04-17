@@ -19,7 +19,6 @@
     --footer-link-hover: #eceff1;
     --officer-info-bg: rgba(38, 50, 56, 0.8);
     --officer-info-color: #eceff1;
-    --mobile-menu-bg: linear-gradient(135deg, #263238, #455a64, #607d8b);
 }
 
 /* Dark Mode Styles */
@@ -57,10 +56,6 @@
 #theme-switch:checked ~ main section .officer-grid .officer-info {
     --officer-info-bg: rgba(28, 37, 38, 0.8);
     --officer-info-color: #e0e0e0;
-}
-
-#theme-switch:checked ~ nav.top-nav .menu {
-    --mobile-menu-bg: linear-gradient(135deg, #1c2526, #2a3439, #3e4b50);
 }
 
 html, body {
@@ -358,9 +353,9 @@ section {
 @media (max-width: 768px) {
     .top-nav {
         justify-content: flex-start;
-        position: relative;
+        position: fixed; /* Already fixed, ensures it stays at top */
         height: auto;
-        padding: 1.5em;
+        padding: 1em;
     }
 
     .menu-button-container {
@@ -371,13 +366,14 @@ section {
         display: none;
         flex-direction: column;
         position: fixed;
-        top: 3em;
+        top: 3em; /* Below .top-nav */
         left: 0;
         width: 100%;
-        background: var(--mobile-menu-bg);
+        height: calc(100vh - 3em); /* Full viewport height minus nav height */
+        background: var(--nav-bg); /* Matches .top-nav background */
         z-index: 999;
-        height: auto;
         transition: background 0.3s ease;
+        overflow-y: auto; /* Allow scrolling if menu content is long */
     }
 
     #menu-toggle:checked ~ .menu {
