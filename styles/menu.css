@@ -354,7 +354,7 @@ section {
     .top-nav {
         justify-content: flex-start;
         position: fixed;
-        height: auto;
+        height: 4em; /* Thicker to cover gap */
         padding: 1em;
     }
 
@@ -366,7 +366,7 @@ section {
         display: none;
         flex-direction: column;
         position: fixed;
-        top: 3em;
+        top: 4em; /* Match new .top-nav height */
         left: 0;
         width: 100%;
         height: auto; /* Fit content height */
@@ -374,7 +374,6 @@ section {
         z-index: 999;
         transition: background 0.3s ease;
         overflow-y: auto;
-        padding-top: 1rem; /* Close gap at top */
         padding-bottom: 1rem; /* Space at bottom */
         margin: 0; /* Remove default <ul> margins */
     }
@@ -411,7 +410,7 @@ section {
     }
 
     header {
-        padding-top: 5rem;
+        padding-top: 6rem; /* Adjust for thicker .top-nav */
     }
 }
 
