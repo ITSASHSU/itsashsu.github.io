@@ -22,26 +22,44 @@
     --mobile-menu-bg: linear-gradient(135deg, #263238, #455a64, #607d8b);
 }
 
-body.dark-theme {
-    /* Dark Mode */
-    --body-bg: #1c2526;
-    --body-color: #e0e0e0;
+/* Dark Mode Styles */
+#theme-switch:checked ~ nav.top-nav {
     --nav-bg: linear-gradient(135deg, #1c2526, #474747, #c4c4c4);
     --nav-link-color: #e0e0e0;
     --nav-link-hover-bg: #c4c4c4;
+}
+
+#theme-switch:checked ~ body {
+    --body-bg: #1c2526;
+    --body-color: #e0e0e0;
+}
+
+#theme-switch:checked ~ header {
     --header-h1-gradient: linear-gradient(to right, #e0e0e0, #b0bec5);
     --header-h2-color: #b0bec5;
+}
+
+#theme-switch:checked ~ main section {
     --section-bg: #2a3439;
     --section-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
     --section-h2-color: #e0e0e0;
     --section-h2-bar: #c4c4c4;
     --section-p-color: #b0bec5;
+}
+
+#theme-switch:checked ~ footer {
     --footer-bg: linear-gradient(to top, #1c2526, #2a3439);
     --footer-color: #e0e0e0;
     --footer-link-color: #c4c4c4;
     --footer-link-hover: #e0e0e0;
+}
+
+#theme-switch:checked ~ main section .officer-grid .officer-info {
     --officer-info-bg: rgba(28, 37, 38, 0.8);
     --officer-info-color: #e0e0e0;
+}
+
+#theme-switch:checked ~ nav.top-nav .menu {
     --mobile-menu-bg: linear-gradient(135deg, #1c2526, #2a3439, #3e4b50);
 }
 
@@ -225,24 +243,6 @@ body {
 
 #theme-switch:checked + .theme-switch-label .slider {
     transform: translateX(20px);
-}
-
-/* Toggle Theme Class */
-#theme-switch:checked ~ body {
-    content: ''; /* Required for CSS to recognize the selector */
-}
-
-#theme-switch:checked ~ body.light-theme {
-    content: '';
-    display: none; /* Hidden element to trigger theme switch */
-}
-
-body.light-theme {
-    transition: all 0.3s ease;
-}
-
-#theme-switch:checked ~ .light-theme {
-    composes: dark-theme;
 }
 
 /* Header Styles */
