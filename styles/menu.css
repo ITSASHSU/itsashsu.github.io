@@ -250,6 +250,59 @@ body.dark-mode nav .theme-toggle .theme-switch-label .slider {
     transform: translateX(20px);
 }
 
+/* Party Mode Switch */
+.party-toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#party-switch {
+    display: none;
+}
+
+.party-text {
+    color: var(--section-p-color);
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.party-switch-label {
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: #607d8b;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.party-switch-label .slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background: #eceff1;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+body.dark-mode .party-toggle .party-switch-label {
+    background: #2a3439;
+}
+
+body.dark-mode .party-toggle .party-switch-label .slider {
+    background: #e0e0e0;
+}
+
+#party-switch:checked + .party-text + .party-switch-label .slider {
+    transform: translateX(20px);
+}
+
 /* Header Styles */
 header {
     text-align: center;

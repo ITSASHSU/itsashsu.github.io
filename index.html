@@ -6,6 +6,8 @@
     <title>ITSA @ SHSU</title>
     <link rel="stylesheet" href="styles/menu.css">
     <link rel="icon" type="image/x-icon" href="images/itsafav.png">
+    <!-- Include canvas-confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body id="top" class="light-mode">
     <input type="checkbox" id="theme-switch">
@@ -59,6 +61,13 @@
         </section>
         <section id="projects">
             <h2>Projects</h2>
+            <div class="party-toggle">
+                <input type="checkbox" id="party-switch">
+                <label for="party-switch" class="party-text">Party Mode</label>
+                <label for="party-switch" class="party-switch-label">
+                    <span class="slider"></span>
+                </label>
+            </div>
             <p>Link to USITCC achievements</p>
             <p>Current Projects</p>
         </section>
@@ -116,9 +125,36 @@
         <p>© 2025 ITSA @ SHSU. All rights reserved.</p>
     </footer>
     <script>
+        // Night mode toggle
         document.getElementById('theme-switch').addEventListener('change', function() {
             document.body.classList.toggle('dark-mode', this.checked);
             document.body.classList.toggle('light-mode', !this.checked);
+        });
+
+        // Party mode toggle
+        let confettiInterval = null;
+        document.getElementById('party-switch').addEventListener('change', function() {
+            if (this.checked) {
+                // Start confetti animation
+                confettiInterval = setInterval(() => {
+                    confetti({
+                        particleCount: 100,
+                        spread: 70,
+                        origin: { y: 0.6 },
+                        colors: ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff'],
+                    });
+                }, 1000);
+                document.body.classList.add('party-mode');
+            } else {
+                // Stop confetti animation
+                if (confettiInterval) {
+                    clearInterval(confettiInterval);
+                    confettiInterval = null;
+                }
+                // Clear existing confetti
+                confetti.reset();
+                document.body.classList.remove('party-mode');
+            }
         });
     </script>
 </body>
