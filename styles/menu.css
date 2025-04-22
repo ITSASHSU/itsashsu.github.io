@@ -254,7 +254,13 @@ body.dark-mode nav .theme-toggle .theme-switch-label .slider {
 .party-toggle {
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.party-toggle:hover {
+    opacity: 1;
 }
 
 #party-switch {
@@ -262,8 +268,8 @@ body.dark-mode nav .theme-toggle .theme-switch-label .slider {
 }
 
 .party-text {
-    color: var(--section-p-color);
-    font-size: 0.9rem;
+    color: var(--footer-color);
+    font-size: 0.8rem;
     margin-right: 0.5rem;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -289,6 +295,10 @@ body.dark-mode nav .theme-toggle .theme-switch-label .slider {
     background: #eceff1;
     border-radius: 50%;
     transition: transform 0.3s ease;
+}
+
+body.dark-mode .party-toggle .party-text {
+    color: var(--footer-color);
 }
 
 body.dark-mode .party-toggle .party-switch-label {
@@ -341,18 +351,21 @@ section {
     margin-bottom: 2rem;
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
+
 .scaled-image {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
 }
+
 #schedule img {
     max-width: 100%;
     height: auto;
-    display: block; /* Ensures the image behaves as a block element */
-    margin: 0 auto; /* Optional: Centers the image horizontally */
+    display: block;
+    margin: 0 auto;
 }
+
 section h2 {
     color: var(--section-h2-color);
     font-size: 1.8rem;
@@ -423,7 +436,7 @@ section {
     animation: fadeIn 0.6s ease-out;
 }
 
-/* Mobile Menu (Below 975 for overlapping issues px) */
+/* Mobile Menu (Below 975px for overlapping issues) */
 @media (max-width: 975px) {
     .top-nav {
         justify-content: flex-start;
@@ -522,7 +535,7 @@ section {
 .officer-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
     gap: 1.5rem;
     margin-bottom: 2rem;
 }
@@ -533,6 +546,8 @@ section {
     border-radius: 10px;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    aspect-ratio: 1 / 1;
+    max-width: 300px;
 }
 
 .officer-card img {
@@ -540,6 +555,7 @@ section {
     height: 100%;
     object-fit: cover;
     display: block;
+    aspect-ratio: 1 / 1;
 }
 
 .officer-info {
@@ -599,15 +615,21 @@ section {
         padding: 0.5rem 0.6rem;
         font-size: 0.85rem;
     }
+    .officer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .officer-card {
+        max-width: 250px;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .officer-grid {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, auto);
     }
-
-    .officer-card img {
-        height: 250px;
+    .officer-card {
+        max-width: 300px;
+        margin: 0 auto;
     }
 }
