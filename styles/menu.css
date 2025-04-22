@@ -534,14 +534,6 @@ section {
     .menu a {
         padding: 0.5rem 0.6rem;
         font-size: 0.85rem;
-    }
-    .officer-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .officer-card {
-        max-width: 250px;
-    }
-}
 
 /* Officer Grid Styles */
 .officer-grid {
