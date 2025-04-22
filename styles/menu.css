@@ -617,7 +617,6 @@ section {
         grid-template-rows: repeat(6, auto);
     }
     .officer-card {
-        max-width: 300px;
         margin: 0 auto;
     }
 }
