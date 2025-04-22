@@ -611,12 +611,3 @@ section {
 }
 
 /* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-    .officer-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, auto);
-    }
-    .officer-card {
-        margin: 0 auto;
-    }
-}
