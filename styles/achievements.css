@@ -23,12 +23,12 @@ html {
  }
  header h1 {
      font-size: 175%;
-     color: rgb(0, 98, 128);
+     color: rgb(245, 100, 35);
      text-indent: 30px;
  }
  header h2 {
      font-size: 130%;
-     color: #c97215;
+     color: #FFF;
      text-indent: 30px;
      border-bottom: 2px solid orange;
  }
