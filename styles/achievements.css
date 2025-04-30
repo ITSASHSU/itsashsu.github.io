@@ -1,5 +1,5 @@
 html {
-    background-image: linear-gradient to (bottom, white 0%, rgb(245,100,35) 100%);
+    background-image: linear-gradient(to bottom, white 0%, rgb(245,100,35));
  }
  
  
@@ -60,7 +60,7 @@ article p::first-letter {
     font-size: 3em;
     font-weight: bold;
     font-style: italic;
-    color: black;
+    color: navy;
 }
 aside {
     width: 20%;
