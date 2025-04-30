@@ -65,15 +65,6 @@ aside {
     padding-bottom: 2em;
     padding-left: 1em;
 }
-p.fixed {
-    width: auto;
-    position: fixed;
-    bottom: 35%;
-    right: 0%;
-    border: 3px solid rgb(235, 100, 35);
-    background-color: #98989a;
-    padding: 2em;   
- }
 footer {
     clear: both;
 }
@@ -112,12 +103,6 @@ footer {
       float: none;
       display: block;
       margin: 0 auto;
-    }
-  
-    p.fixed {
-      position: static;
-      width: 100%;
-      margin-top: 1em;
     }
   }
   
@@ -159,12 +144,5 @@ footer {
   
     .shadow {
       text-shadow: none;
-    }
-  
-    p.fixed {
-      position: static;
-      background-color: #ccc;
-      border-width: 2px;
-      padding: 1em;
     }
   }
