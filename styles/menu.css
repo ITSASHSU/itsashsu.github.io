@@ -449,7 +449,7 @@ section {
 @media (max-width: 975px) {
     .top-nav {
         justify-content: flex-start;
-        position o-position: fixed;
+        position: fixed;
         height: 4em;
         padding: 1em;
     }
