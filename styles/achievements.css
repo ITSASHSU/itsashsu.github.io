@@ -37,7 +37,7 @@ html {
      text-shadow:  2px 2px 2px rgb(57, 131, 160);
  }
  article {
-    clear:both;
+    clear: both;
     width: 70%;
     float: left;
     column-count: 2;
