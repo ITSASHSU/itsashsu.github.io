@@ -146,3 +146,16 @@ footer {
       text-shadow: none;
     }
   }
+
+/* Responsive Design for Large Desktops */
+@media (min-width: 1200px) {
+  body {
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+
+  article {
+    column-count: 3;
+    column-gap: 2em;
+  }
+}
