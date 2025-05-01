@@ -35,6 +35,47 @@
         .paw-toggle:hover {
             background-color: #e55a00;
         }
+        /* Responsive aside styling */
+        aside {
+            width: 25%; /* Scales with window width */
+            min-width: 200px; /* Prevents aside from becoming too narrow */
+            max-width: 400px; /* Caps maximum width */
+            padding: 15px;
+            box-sizing: border-box;
+            float: right; /* Aligns aside to the right of the article */
+            background-color: #f8f8f8; /* Light background for contrast */
+            border-left: 2px solid #ff6200; /* SHSU orange border */
+        }
+        /* Adjust article to accommodate aside */
+        article {
+            margin-right: 30%; /* Leaves space for the aside */
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            aside {
+                width: 100%; /* Full width on small screens */
+                max-width: none;
+                float: none; /* Stack below article */
+                border-left: none;
+                border-top: 2px solid #ff6200;
+            }
+            article {
+                margin-right: 0; /* Remove margin on small screens */
+            }
+        }
+        /* Media query for very small screens */
+        @media (max-width: 480px) {
+            aside {
+                padding: 10px;
+                font-size: 14px; /* Smaller text for readability */
+            }
+            .paw-print {
+                width: 30px; /* Smaller paw prints on mobile */
+                height: 30px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -45,30 +86,31 @@
         <button class="paw-toggle" onclick="togglePawPrints()">Toggle Paw Prints</button>
     </header>
     <article>
-        <h3> Sammy </h3>
+        <h3>Sammy</h3>
         <img src="images/Sam_Houston_Mascot_White_Sweater_FC_RGB_WHTBG_FINAL_Sam_Houston_Mascot_White_Sweater_FC_PMS_WHTBG.png" alt="Sammy" height="100">
-        <li><a href="images/20230331_130437368_iOS.jpg" target="_blank"> USITCC </a>
-        <li><a href="images/20230331_131251152_iOS.jpg" target="_blank"> Group Work</a>
-        <li><a href="images/20230331_205925966_iOS.jpg" target="_blank"> Group Casual </a>
-        <li><a href="images/20230401_165057129_iOS 2.jpg" target="_blank"> USITCC Group</a>
-        <li><a href="files/USITCC Experience - Spring 2023.pptx">USITCC Experience</a></li>
-        <li><a href="files/USITCC 2018.pptx"> USITCC 2018</a></li>
-        <li><a href="files/USITCC 2019.pptx"> USITCC 2019</a></li>
-        <li><a href="files/MIS Students at USITCC - Collage 2023.pptx">MIS Student at USITCC Collage 2023</a></li>
+        <ul>
+            <li><a href="images/20230331_130437368_iOS.jpg" target="_blank">USITCC</a></li>
+            <li><a href="images/20230331_131251152_iOS.jpg" target="_blank">Group Work</a></li>
+            <li><a href="images/20230331_205925966_iOS.jpg" target="_blank">Group Casual</a></li>
+            <li><a href="images/20230401_165057129_iOS 2.jpg" target="_blank">USITCC Group</a></li>
+            <li><a href="files/USITCC Experience - Spring 2023.pptx">USITCC Experience</a></li>
+            <li><a href="files/USITCC 2018.pptx">USITCC 2018</a></li>
+            <li><a href="files/USITCC 2019.pptx">USITCC 2019</a></li>
+            <li><a href="files/MIS Students at USITCC - Collage 2023.pptx">MIS Student at USITCC Collage 2023</a></li>
+        </ul>
     </article>
     <aside>
         <h4>Informative Docs</h4>
         <ol>
             <li><a href="files/Confrence.docx">Conference</a></li>
-            <li><a href="files/ITSA - Student Org_Return_Summary_2023.docx"> St. Org. Return 2023</a></li>
-            <li><a href="files/Return Summary for Student Affairs - 2023.docx"> St. Affairs 2023</a></li>
-            <li><a href="files/Student Event Funding Request Form.docx"> Std. Event Funding Request Form</a></li>
-            <li><a href="files/Student Org_Return_Summary_2023.docx"> Student Org_Return_Summary_23</a></li>
-            <li><a href="files/Student Org_Return_Summary_2023_Noah.docx"> Student Org_Return_Summary23_N</a></li>
+            <li><a href="files/ITSA - Student Org_Return_Summary_2023.docx">St. Org. Return 2023</a></li>
+            <li><a href="files/Return Summary for Student Affairs - 2023.docx">St. Affairs 2023</a></li>
+            <li><a href="files/Student Event Funding Request Form.docx">Std. Event Funding Request Form</a></li>
+            <li><a href="files/Student Org_Return_Summary_2023.docx">Student Org_Return_Summary_23</a></li>
+            <li><a href="files/Student Org_Return_Summary_2023_Noah.docx">Student Org_Return_Summary23_N</a></li>
         </ol>
         <a href="index.html">Return to Home Page</a>
     </aside>
-    
     <footer>
         <br>
         <br>
