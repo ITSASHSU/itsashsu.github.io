@@ -3,7 +3,7 @@
     /* Light Mode (Default) */
     --body-bg: white; /* Matches --section-bg */
     --body-color: #37474f;
-    --nav-bg: linear-gradient(135deg, #000000, #474747, #c4c4c4);
+    --nav-bg: linear-gradient(135deg, #263238, #474747, #c4c4c4); /* Updated to start with #263238 */
     --nav-link-color: #eceff1;
     --nav-link-hover-bg: #b0bec5;
     --header-h1-gradient: linear-gradient(to right, #263238, #455a64);
@@ -23,7 +23,7 @@
 
 /* Dark Mode Styles */
 body.dark-mode nav.top-nav {
-    --nav-bg: linear-gradient(135deg, #2a3439, #474747, #c4c4c4);
+    --nav-bg: linear-gradient(135deg, #1c2526, #474747, #c4c4c4); /* Updated to start with #1c2526 */
     --nav-link-color: #e0e0e0;
     --nav-link-hover-bg: #c4c4c4;
 }
