@@ -6,7 +6,7 @@
     <meta name="description" content="Showcasing groundbreaking projects, competitions, and leadership milestones of SHSU's IT student organization, ITSA. See how we innovate in tech!">
     <meta name="keywords" content="itsa, achievements, shsu, sam houston state university">
     <title>The Archives</title>
-    <link rel="stylesheet" href="styles/archives.css">
+    <link rel="stylesheet" href="styles/achievements.css">
     <link rel="icon" type="image/x-icon" href="images/itsafav.png">
     <style>
         .paw-print {
@@ -37,43 +37,94 @@
         }
         /* Responsive aside styling */
         aside {
-            width: 25%; /* Scales with window width */
-            min-width: 200px; /* Prevents aside from becoming too narrow */
-            max-width: 400px; /* Caps maximum width */
+            width: 25%;
+            min-width: 200px;
+            max-width: 400px;
             padding: 15px;
             box-sizing: border-box;
-            float: right; /* Aligns aside to the right of the article */
-            background-color: #baa596; /* Light background for contrast */
-            border-left: 2px solid #ff6200; /* SHSU orange border */
+            float: right;
+            background-color: #f8f8f8;
+            border-left: 2px solid #ff6200;
         }
-        /* Adjust article to accommodate aside */
         article {
-            margin-right: 30%; /* Leaves space for the aside */
+            margin-right: 30%;
             padding: 15px;
             box-sizing: border-box;
         }
-        /* Media query for smaller screens */
         @media (max-width: 768px) {
             aside {
-                width: 100%; /* Full width on small screens */
+                width: 100%;
                 max-width: none;
-                float: none; /* Stack below article */
+                float: none;
                 border-left: none;
                 border-top: 2px solid #ff6200;
             }
             article {
-                margin-right: 0; /* Remove margin on small screens */
+                margin-right: 0;
             }
         }
-        /* Media query for very small screens */
         @media (max-width: 480px) {
             aside {
                 padding: 10px;
-                font-size: 14px; /* Smaller text for readability */
+                font-size: 14px;
             }
             .paw-print {
-                width: 30px; /* Smaller paw prints on mobile */
+                width: 30px;
                 height: 30px;
+            }
+        }
+        /* Organized list styling */
+        .archive-list {
+            list-style: none; /* Remove default bullets */
+            padding: 0;
+            margin: 20px 0;
+        }
+        .archive-list .category {
+            margin-bottom: 20px;
+        }
+        .archive-list .category h4 {
+            color: #ff6200; /* SHSU orange */
+            font-size: 18px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ff6200;
+            padding-bottom: 5px;
+        }
+        .archive-list ul {
+            list-style: none;
+            padding-left: 15px;
+        }
+        .archive-list li {
+            position: relative;
+            padding: 8px 0 8px 20px;
+            font-size: 16px;
+        }
+        .archive-list li:before {
+            content: '🐾'; /* Paw print emoji as bullet */
+            position: absolute;
+            left: 0;
+            color: #ff6200;
+            font-size: 14px;
+        }
+        .archive-list a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .archive-list a:hover {
+            color: #ff6200;
+            text-decoration: underline;
+        }
+        /* Responsive list styling */
+        @media (max-width: 768px) {
+            .archive-list .category h4 {
+                font-size: 16px;
+            }
+            .archive-list li {
+                font-size: 14px;
+                padding: 6px 0 6px 18px;
+            }
+            .archive-list li:before {
+                font-size: 12px;
             }
         }
     </style>
@@ -88,16 +139,26 @@
     <article>
         <h3>Sammy</h3>
         <img src="images/Sam_Houston_Mascot_White_Sweater_FC_RGB_WHTBG_FINAL_Sam_Houston_Mascot_White_Sweater_FC_PMS_WHTBG.png" alt="Sammy" height="100">
-        <ul>
-            <li><a href="images/20230331_130437368_iOS.jpg" target="_blank">USITCC</a></li>
-            <li><a href="images/20230331_131251152_iOS.jpg" target="_blank">Group Work</a></li>
-            <li><a href="images/20230331_205925966_iOS.jpg" target="_blank">Group Casual</a></li>
-            <li><a href="images/20230401_165057129_iOS 2.jpg" target="_blank">USITCC Group</a></li>
-            <li><a href="files/USITCC Experience - Spring 2023.pptx">USITCC Experience</a></li>
-            <li><a href="files/USITCC 2018.pptx">USITCC 2018</a></li>
-            <li><a href="files/USITCC 2019.pptx">USITCC 2019</a></li>
-            <li><a href="files/MIS Students at USITCC - Collage 2023.pptx">MIS Student at USITCC Collage 2023</a></li>
-        </ul>
+        <div class="archive-list">
+            <div class="category">
+                <h4>USITCC Photos</h4>
+                <ul>
+                    <li><a href="images/20230331_130437368_iOS.jpg" target="_blank">USITCC Event - March 31, 2023</a></li>
+                    <li><a href="images/20230331_131251152_iOS.jpg" target="_blank">Group Work Session - March 31, 2023</a></li>
+                    <li><a href="images/20230331_205925966_iOS.jpg" target="_blank">Group Casual Photo - March 31, 2023</a></li>
+                    <li><a href="images/20230401_165057129_iOS 2.jpg" target="_blank">USITCC Group Photo - April 1, 2023</a></li>
+                </ul>
+            </div>
+            <div class="category">
+                <h4>USITCC Presentations</h4>
+                <ul>
+                    <li><a href="files/USITCC Experience - Spring 2023.pptx">USITCC Experience - Spring 2023</a></li>
+                    <li><a href="files/USITCC 2018.pptx">USITCC - 2018</a></li>
+                    <li><a href="files/USITCC 2019.pptx">USITCC - 2019</a></li>
+                    <li><a href="files/MIS Students at USITCC - Collage 2023.pptx">MIS Students at USITCC Collage - 2023</a></li>
+                </ul>
+            </div>
+        </div>
     </article>
     <aside>
         <h4>Informative Docs</h4>
