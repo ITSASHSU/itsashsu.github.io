@@ -23,7 +23,7 @@
 
 /* Dark Mode Styles */
 body.dark-mode nav.top-nav {
-    --nav-bg: linear-gradient(135deg, #1c2526, #474747, #c4c4c4);
+    --nav-bg: linear-gradient(135deg, #2a3439, #474747, #c4c4c4);
     --nav-link-color: #e0e0e0;
     --nav-link-hover-bg: #c4c4c4;
 }
